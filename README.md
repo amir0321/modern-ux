@@ -1,18 +1,29 @@
-# React + Vite
+# Modern UX – SaaS Landing Page i React & Tailwind
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Ett frontend-projekt där jag byggde en modern landningssida för en SaaS-produkt (`Navbar`, `Hero`, `Features`, `Pricing`, `Testimonials` och `Footer`) i React 19 och Tailwind CSS.
 
-Currently, two official plugins are available:
+## Teknikstack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Ramverk:** React 19 + Vite
+- **Styling:** Tailwind CSS (mörkt tema med fokus på kontrast och typografi)
+- **Arkitektur:** Datadrivna komponenter (`src/data/` + `src/components/`)
 
-## React Compiler
+## Mina tankar, val och vad jag lärde mig
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+Syftet med det här projektet var att träna på **komponentstruktur, visuell hierarki och responsiv design** utan att förlita mig på färdiga komponentbibliotek.
 
-Note: This will impact Vite dev & build performances.
+- **Separera data från presentation (`src/data/`):**
+  Istället för att upprepa långa block av JSX för varje prisplan eller kundrecension valde jag att lägga innehållet som strukturerade JavaScript-objekt i `src/data/` och rendera dem med `.map()`. Det gör komponenterna korta, läsbara och lätta att uppdatera.
+- **Mörkt tema (`bg-slate-950`) och läsbarhet:**
+  Jag jobbade med tydliga kontraster, luftig spacing och fokus på Call-to-Action-knappar i `Hero`- och `Pricing`-sektionerna.
+- **Responsivitet från mobil till desktop:**
+  Övade på att bygga flexibla grids i Tailwind som staplas snyggt på små skärmar och växer till flerkolumnslayouter på desktop.
 
-## Expanding the ESLint configuration
+## Köra lokalt
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+git clone https://github.com/amir0321/modern-ux.git
+cd modern-ux
+npm install
+npm run dev
+```
